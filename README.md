@@ -5,11 +5,12 @@ Minimal reproduction of an issue with `sdl2-ttf` encountered while making [perfe
 To reproduce, execute the following steps:
 
 ```bash
-    git clone https://github.com/Solonarv/sdl2-ttf-problem
     # Make sure stack's pacman is up to date
     stack exec -- pacman -Syu
     # Install pkg-config, SDL2 and SDL2_ttf somewhere stack can find them
     stack exec -- pacman -S mingw-w64-x86_64-pkg-config mingw-w64-x86_64-SDL2 mingw-w64-x86_64-SDL2_ttf
+    git clone https://github.com/Solonarv/sdl2-ttf-problem
+    cd sdl2-ttf-problem
     stack build
     stack exec -- sdl2-ttf-problem
 ```
@@ -23,10 +24,12 @@ using the examples from the [sdl2-ttf](https://github.com/haskell-game/sdl2-ttf)
 
 Versions used are:
 
-OS: Windows 7 Professional
-stack: originally 1.6.5, reproduced identically on 1.7.1
-mingw-w64-x86_64-SDL2 2.0.8-1
-mingw-w64-x86_64-SDL2_ttf 2.0.14-1
-sdl2: 2.4.0.1
-sdl2-ttf: 2.0.2
-Using LTS-11.7 snapshot
+    OS: Windows 7 Professional
+    stack: originally 1.6.5, reproduced identically on 1.7.1
+    mingw-w64-x86_64-SDL2 2.0.8-1
+    mingw-w64-x86_64-SDL2_ttf 2.0.14-1
+    sdl2: 2.4.0.1
+    sdl2-ttf: 2.0.2
+    Using LTS-11.7 snapshot
+
+Edit: this appears to be related to an incorrect version of `zlib1.dll`.
