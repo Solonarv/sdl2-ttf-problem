@@ -14,7 +14,7 @@ To reproduce, execute the following steps:
     stack exec -- sdl2-ttf-problem
 ```
 
-Reading the source of [Main](FIXME) suggests that a prompt will appear, asking `Should we attempt to initialize sdl2-ttf?`.
+Reading the source of [Main](src/Main.hs) suggests that a prompt will appear, asking `Should we attempt to initialize sdl2-ttf?`.
 Instead, nothing happens and the program exits immediately. This is surprising, especially because it happens
 *even if no sdl2-ttf functions are called*.
 
