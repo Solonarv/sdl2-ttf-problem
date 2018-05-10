@@ -1,0 +1,22 @@
+name:                sdl2-ttf-problem
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/Solonarv/sdl2-ttf-problem#readme
+license:             BSD3
+author:              Solonarv
+maintainer:          nstamm@gmx.de
+copyright:           2018 Solonarv
+category:            Web
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+  - sdl2
+  - sdl2-ttf
+
+executables:
+  sdl2-ttf-problem:
+    source-dirs:      src
+    main:             Main.hs
